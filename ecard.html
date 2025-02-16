@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Birthday eCard</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffebcd;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            position: relative;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 60%;
+            margin: auto;
+            margin-top: 50px;
+        }
+        .balloons {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: float 5s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        .message {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d2691e;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #ff6347;
+        }
+    </style>
+</head>
+<body>
+    <audio id="music" src="https://www.fesliyanstudios.com/play-mp3/4389" loop></audio>
+    <div class="card">
+        <img class="balloons" src="https://cdn.pixabay.com/photo/2013/07/12/12/36/balloons-145664_1280.png" width="100" alt="Balloons">
+        <h1>🎉 Happy Birthday! 🎂</h1>
+        <p class="message">Wishing you a day filled with love, laughter, and happiness!</p>
+        <button onclick="playMusic()">Click for a Surprise! 🎁</button>
+    </div>
+
+    <script>
+        function playMusic() {
+            document.getElementById('music').play();
+            alert('🎊 Happy Birthday! Enjoy your special day! 🎊');
+        }
+    </script>
+</body>
+</html>
